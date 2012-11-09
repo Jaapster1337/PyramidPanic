@@ -1,0 +1,14 @@
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.exe
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.pdb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Background.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Title.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Button_help.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Button_leveleditor.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Button_load.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Button_quit.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Button_scores.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Button_start.xnb
