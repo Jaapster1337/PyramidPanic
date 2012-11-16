@@ -15,19 +15,24 @@ namespace PyramidPanic
     {
         //Fields
         private static KeyboardState ks, oks;
+        private static MouseState ms, oms;
 
 
         //Constructor wordt eenmaal aangeroepen
         static Input()
         {
             ks = Keyboard.GetState();
+            ms = Mouse.GetState();
             oks = ks;
+            oms = ms;
         }
         //Update method
         public static void Update()
         {
             oks = ks;
+            oms = ms;
             ks = Keyboard.GetState();
+            ms = Mouse.GetState();
         }
 
         //Leveldetector voor voor het toetsenbord
@@ -41,6 +46,16 @@ namespace PyramidPanic
         public static bool EdgeDetectKeyDown(Keys key)
         {
             return (ks.IsKeyDown(key) && oks.IsKeyUp(key));
+        }
+        //Edgedetector voor linksklik van muis
+        public static bool MouseEdgeDetectPressLeft()
+        {
+            return (ms.LeftButton == ButtonState.Pressed && oms.LeftButton == ButtonState.Released);
+        }
+
+        public static bool MouseEdgeDetectPressRight()
+        {
+            return (ms.RightButton == ButtonState.Pressed && oms.RightButton == ButtonState.Released);
         }
 
     }

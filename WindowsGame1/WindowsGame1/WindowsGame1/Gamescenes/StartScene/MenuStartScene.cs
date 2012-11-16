@@ -103,6 +103,11 @@ namespace PyramidPanic
             {
                 this.game.GameState = new LevelEditorScene(this.game);
             }
+            
+            if (Input.EdgeDetectKeyDown(Keys.Escape))
+            {
+                this.game.GameState = new StartScene(this.game);
+            }
         }
 
         //Draw
