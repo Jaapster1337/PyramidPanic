@@ -74,39 +74,74 @@ namespace PyramidPanic
                 }
             }
 
-            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Start)
+            if ( (this.buttonState == ButtonState.Start) ||
+                (this.start.Rectangle.Intersects(Input.MouseRectangle())) )
             {
-                this.game.GameState = new PlayScene(this.game);
+                this.buttonState = ButtonState.Start;
+                if (Input.MouseEdgeDetectPressLeft() && this.start.Rectangle.Intersects(Input.MouseRectangle()) || Input.EdgeDetectKeyDown(Keys.Enter))
+                {
+                    this.game.GameState = new PlayScene(this.game);
+                }
             }
 
-            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Load)
+            if ( (this.buttonState == ButtonState.Load) ||
+                (this.load.Rectangle.Intersects(Input.MouseRectangle())) )
             {
-                this.game.GameState = new LoadScene(this.game);
+                this.buttonState = ButtonState.Load;
+                if (Input.MouseEdgeDetectPressLeft() && this.load.Rectangle.Intersects(Input.MouseRectangle()) || Input.EdgeDetectKeyDown(Keys.Enter))
+                {
+                    this.game.GameState = new LoadScene(this.game);
+                }
             }
 
-            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Help)
+            if ( (this.buttonState == ButtonState.Help) ||
+                (this.help.Rectangle.Intersects(Input.MouseRectangle())) )
             {
-                this.game.GameState = new HelpScene(this.game);
+                this.buttonState = ButtonState.Help;
+                if (Input.MouseEdgeDetectPressLeft() && this.help.Rectangle.Intersects(Input.MouseRectangle()) || Input.EdgeDetectKeyDown(Keys.Enter))
+                {
+                    this.game.GameState = new HelpScene(this.game);
+                }
             }
 
-            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Scores)
+            if ( (this.buttonState == ButtonState.Scores) ||
+                (this.scores.Rectangle.Intersects(Input.MouseRectangle())) )
             {
-                this.game.GameState = new ScoresScene(this.game);
+                this.buttonState = ButtonState.Scores;
+                if (Input.MouseEdgeDetectPressLeft() && this.scores.Rectangle.Intersects(Input.MouseRectangle()) || Input.EdgeDetectKeyDown(Keys.Enter))
+                {
+                    this.game.GameState = new ScoresScene(this.game);
+                }
             }
 
-            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Quit)
+            if ( (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.Quit)||
+                (this.quit.Rectangle.Intersects(Input.MouseRectangle())) )
             {
-                this.game.GameState = new QuitScene(this.game);
+                this.buttonState = ButtonState.Quit;
+                if (Input.MouseEdgeDetectPressLeft() && this.quit.Rectangle.Intersects(Input.MouseRectangle()) || Input.EdgeDetectKeyDown(Keys.Enter))
+                {
+                    this.game.GameState = new QuitScene(this.game); 
+                }
             }
 
-            if (Input.EdgeDetectKeyDown(Keys.Enter) && this.buttonState == ButtonState.LevelEditor)
+            if ( (this.buttonState == ButtonState.LevelEditor)||
+                (this.leveleditor.Rectangle.Intersects(Input.MouseRectangle())) )
             {
-                this.game.GameState = new LevelEditorScene(this.game);
+                this.buttonState = ButtonState.LevelEditor;
+                if (Input.MouseEdgeDetectPressLeft() && this.leveleditor.Rectangle.Intersects(Input.MouseRectangle()) || Input.EdgeDetectKeyDown(Keys.Enter))
+                {
+                    this.game.GameState = new LevelEditorScene(this.game);
+                }
             }
             
             if (Input.EdgeDetectKeyDown(Keys.Escape))
             {
                 this.game.GameState = new StartScene(this.game);
+            }
+
+            if (this.start.Rectangle.Intersects(Input.MouseRectangle()))
+            {
+                
             }
         }
 
