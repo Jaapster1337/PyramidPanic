@@ -1,3 +1,4 @@
+Content\PlaySceneAssets\Blocks\Transparant.xnb
 Content\StartSceneAssets\Background.xnb
 Content\StartSceneAssets\Title.xnb
 Content\StartSceneAssets\Button_help.xnb
@@ -6,3 +7,6 @@ Content\StartSceneAssets\Button_load.xnb
 Content\StartSceneAssets\Button_quit.xnb
 Content\StartSceneAssets\Button_scores.xnb
 Content\StartSceneAssets\Button_start.xnb
+Content\PlaySceneAssets\Blocks\Block.xnb
+Content\PlaySceneAssets\Levels\0.txt
+Content\PlaySceneAssets\Levels\1.txt

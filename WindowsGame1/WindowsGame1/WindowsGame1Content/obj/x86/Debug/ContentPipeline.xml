@@ -2,6 +2,15 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
+      <Source>PlaySceneAssets\Blocks\Transparant.png</Source>
+      <Name>PlaySceneAssets\Blocks\Transparant</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Blocks\Transparant.xnb</Output>
+      <Time>2012-03-08T09:20:10+01:00</Time>
+    </Item>
+    <Item>
       <Source>StartSceneAssets\Background.png</Source>
       <Name>StartSceneAssets\Background</Name>
       <Importer>TextureImporter</Importer>
@@ -72,6 +81,15 @@
       <Options>None</Options>
       <Output>D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\StartSceneAssets\Button_start.xnb</Output>
       <Time>2012-01-26T11:42:20+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlaySceneAssets\Blocks\Block.png</Source>
+      <Name>PlaySceneAssets\Blocks\Block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Blocks\Block.xnb</Output>
+      <Time>2012-03-08T09:15:26+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

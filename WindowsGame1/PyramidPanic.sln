@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PyramidPanic", "WindowsGame1\WindowsGame1\PyramidPanic.csproj", "{9A3170F0-F6A1-4452-AD97-18D563A87731}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsGame1Content", "WindowsGame1\WindowsGame1Content\WindowsGame1Content.contentproj", "{51E5B8AE-94B8-4888-A351-3ED2EEA68FB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PyramidPanicContent", "WindowsGame1\WindowsGame1Content\PyramidPanicContent.contentproj", "{51E5B8AE-94B8-4888-A351-3ED2EEA68FB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
