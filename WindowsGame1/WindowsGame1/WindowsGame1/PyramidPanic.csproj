@@ -5,7 +5,7 @@
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PyramidPanic</RootNamespace>
     <AssemblyName>WindowsGame1</AssemblyName>
@@ -119,7 +119,8 @@
     <Compile Include="Gamescenes\LevelEditorScene\LevelEditorScene.cs" />
     <Compile Include="Gamescenes\LoadScene\LoadScene.cs" />
     <Compile Include="Gamescenes\PlayScene\PlayScene.cs" />
-    <Compile Include="IStateGame.cs" />
+    <Compile Include="Gamescenes\IStateGame.cs" />
+    <Compile Include="Gamescenes\PlayScene\Panel\Panel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Game\PyramidPanic.cs" />
