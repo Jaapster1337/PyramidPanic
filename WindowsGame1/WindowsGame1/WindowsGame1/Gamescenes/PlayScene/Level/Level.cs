@@ -22,6 +22,9 @@ namespace PyramidPanic
         private Block[,] blocks;
         private const int GRIDWIDTH = 32;
         private const int GRIDHEIGHT = 32;
+        private Image background;
+        private List<Image> treasures;
+        private Panel panel;
 
         //Constructor
         public Level(PyramidPanic game, int LevelIndex)
@@ -33,6 +36,8 @@ namespace PyramidPanic
 
         private void LoadAssets()
         {
+            this.treasures = new List<Image>();
+            this.panel = new Panel(this.game, new Vector2(0f, 448f));
             this.lines = new List<string>();
             StreamReader reader = new StreamReader(this.levelPath);
             string line = reader.ReadLine();
@@ -55,14 +60,35 @@ namespace PyramidPanic
                     char blockElement = this.lines[row][column];
                     this.blocks[column, row] = LoadBlock(blockElement, column * GRIDWIDTH, row * GRIDHEIGHT);
                 }
-            }
+            }            
         }
         private Block LoadBlock(char blockElement, int x, int y)
         {
             switch (blockElement)
-            { 
+            {
+                case 'a': 
+                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Treasure1", new Vector2(x, y)));
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'a');
+                case 'b':
+                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Treasure2", new Vector2(x, y)));
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'b');
+                case 'c':
+                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Potion", new Vector2(x, y)));
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'c');
+                case 'd':
+                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'd');
                 case 'w':
-                    return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, 'w');                   
+                    return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, 'w');
+                case 'x':
+                    return new Block(this.game, @"Wall1", new Vector2(x, y), BlockCollision.NotPassable, 'x');
+                case 'y':
+                    return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
+                case 'z':
+                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');
+                case '@':
+                    this.background = new Image(this.game, @"PlaySceneAssets\Background\Background2", new Vector2(x, y));
+                    return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, '@');
                 case '.':
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, '.');                  
                 default:
@@ -77,7 +103,10 @@ namespace PyramidPanic
         }
 
         public void Draw(GameTime gameTime)
-        { 
+        {
+            
+            this.background.Draw(gameTime);
+            this.panel.Draw(gameTime);
             for ( int row = 0; row < this.blocks.GetLength(1); row++)
             {
                 for (int column = 0; column < this.blocks.GetLength(0); column++)
@@ -85,7 +114,14 @@ namespace PyramidPanic
                     this.blocks[column, row].Draw(gameTime);
                 }
             }
+
+            foreach (Image treasure in this.treasures)
+            {
+                treasure.Draw(gameTime);
+
+            }
+
+             
         }
     }
-
 }
