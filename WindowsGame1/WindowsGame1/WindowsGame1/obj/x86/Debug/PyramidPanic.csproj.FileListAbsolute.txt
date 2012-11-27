@@ -27,3 +27,4 @@ D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Conte
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Panel\Panel.xnb
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Panel\Lives.xnb
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Font\Arial.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Scorpion\Scorpion.xnb
