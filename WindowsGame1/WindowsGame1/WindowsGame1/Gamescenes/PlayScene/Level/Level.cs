@@ -29,6 +29,18 @@ namespace PyramidPanic
         private List<Scorpion> scorpions;
         private List<Beetle> beetles;
 
+        //Properties
+        public List<Beetle> Beetles
+        {
+            get { return this.beetles; }            
+        }
+
+        public Block[,] Blocks
+        {
+            get { return this.blocks; }           
+        }
+        
+
         //Constructor
         public Level(PyramidPanic game, int LevelIndex)
         {
@@ -65,7 +77,8 @@ namespace PyramidPanic
                     char blockElement = this.lines[row][column];
                     this.blocks[column, row] = LoadBlock(blockElement, column * GRIDWIDTH, row * GRIDHEIGHT);
                 }
-            }            
+            }
+            BeetleManager.Level = this;
         }
         private Block LoadBlock(char blockElement, int x, int y)
         {

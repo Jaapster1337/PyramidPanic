@@ -23,11 +23,11 @@ namespace PyramidPanic
             this.angle = (float)Math.PI;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             //De scorpion loopt naar recht
             this.beetle.Position += new Vector2(0f, this.beetle.Speed);
-            if( this.beetle.Position.Y > 384)
+            if( this.beetle.Position.Y > this.beetle.Bottom)
             {
                 this.beetle.State = new WalkUp(this.beetle);
             }
@@ -35,7 +35,7 @@ namespace PyramidPanic
         }
 
 
-        public void Draw(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
         }

@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="Gamescenes\Beetle\BeetleManager.cs" />
     <Compile Include="Gamescenes\Beetle\IBeetle.cs" />
     <Compile Include="Gamescenes\Beetle\Beetle.cs" />
     <Compile Include="Gamescenes\Beetle\WalkDown.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="HelperClasses\Image.cs" />
     <Compile Include="Gamescenes\StartScene\MenuStartScene.cs" />
     <Compile Include="Gamescenes\HelpScene\HelpScene.cs" />
+    <Compile Include="AnimatedSprite\IAnimatedSprite.cs" />
     <Compile Include="Input\Input.cs" />
     <Compile Include="Gamescenes\LevelEditorScene\LevelEditorScene.cs" />
     <Compile Include="Gamescenes\LoadScene\LoadScene.cs" />

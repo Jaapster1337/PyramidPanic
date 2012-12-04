@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Storage;
 namespace PyramidPanic
 {
-    public class Beetle
+    public class Beetle : IAnimatedSprite
     {
         //Fields
         private PyramidPanic game;
@@ -21,8 +21,21 @@ namespace PyramidPanic
         private Rectangle rectangle;
         private IBeetle state;
         private float speed;
+        private float top, bottom;
 
         //Properties
+        public float Bottom
+        {
+            set { this.bottom = value; }
+            get { return this.bottom; }
+        }
+
+        public float Top
+        {
+            set { this.top = value; }
+            get { return this.top; }
+        }
+
         public float Speed
         {
             get { return this.speed; }
