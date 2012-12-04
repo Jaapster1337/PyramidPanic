@@ -27,7 +27,7 @@ namespace PyramidPanic
         public void Update(GameTime gameTime)
         {
             //De scorpion loopt naar recht
-            if (this.scorpion.Position.X > 592)
+            if (this.scorpion.Position.X > 576)
             {
                 this.scorpion.State = new WalkLeft(this.scorpion);
             }
