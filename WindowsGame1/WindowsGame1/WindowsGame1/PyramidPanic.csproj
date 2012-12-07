@@ -111,13 +111,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
-    <Compile Include="Gamescenes\Beetle\BeetleManager.cs" />
-    <Compile Include="Gamescenes\Beetle\IBeetle.cs" />
-    <Compile Include="Gamescenes\Beetle\Beetle.cs" />
-    <Compile Include="Gamescenes\Beetle\WalkDown.cs" />
-    <Compile Include="Gamescenes\Beetle\WalkUp.cs" />
+    <Compile Include="Gamescenes\PlayScene\Beetle\BeetleManager.cs" />
+    <Compile Include="Gamescenes\PlayScene\Beetle\IBeetle.cs" />
+    <Compile Include="Gamescenes\PlayScene\Beetle\Beetle.cs" />
+    <Compile Include="Gamescenes\PlayScene\Beetle\WalkDown.cs" />
+    <Compile Include="Gamescenes\PlayScene\Beetle\WalkUp.cs" />
     <Compile Include="Gamescenes\PlayScene\Block\Block.cs" />
     <Compile Include="Gamescenes\PlayScene\Level\Level.cs" />
+    <Compile Include="Gamescenes\PlayScene\Scorpion\ScorpionManager.cs" />
     <Compile Include="Gamescenes\PlayScene\Scorpion\WalkLeft.cs" />
     <Compile Include="HelperClasses\Image.cs" />
     <Compile Include="Gamescenes\StartScene\MenuStartScene.cs" />

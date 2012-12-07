@@ -26,7 +26,7 @@ namespace PyramidPanic
         public override void Update(GameTime gameTime)
         {
             //De scorpion loopt naar recht
-            if( this.scorpion.Position.X < 32)
+            if( this.scorpion.Position.X < this.scorpion.Left)
             {
                 this.scorpion.State = new WalkRight(this.scorpion);
             }

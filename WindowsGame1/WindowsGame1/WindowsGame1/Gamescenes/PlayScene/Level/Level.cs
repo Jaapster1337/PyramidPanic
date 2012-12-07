@@ -30,9 +30,14 @@ namespace PyramidPanic
         private List<Beetle> beetles;
 
         //Properties
-        public List<Beetle> Beetles
+        public List<Beetle> Beetles            
         {
             get { return this.beetles; }            
+        }
+
+        public List<Scorpion> Scorpions
+        {
+            get { return this.scorpions; }
         }
 
         public Block[,] Blocks
@@ -45,7 +50,7 @@ namespace PyramidPanic
         public Level(PyramidPanic game, int LevelIndex)
         {
             this.game = game;
-            this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+            this.levelPath = @"Content\PlaySceneAssets\Levels\3.txt";
             this.LoadAssets();
         }
 
@@ -79,6 +84,7 @@ namespace PyramidPanic
                 }
             }
             BeetleManager.Level = this;
+            ScorpionManager.Level = this;
         }
         private Block LoadBlock(char blockElement, int x, int y)
         {
