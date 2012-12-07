@@ -28,6 +28,7 @@ namespace PyramidPanic
         //private Scorpion scorpion;
         private List<Scorpion> scorpions;
         private List<Beetle> beetles;
+        private Explorer explorer;
 
         //Properties
         public List<Beetle> Beetles            
@@ -50,7 +51,7 @@ namespace PyramidPanic
         public Level(PyramidPanic game, int LevelIndex)
         {
             this.game = game;
-            this.levelPath = @"Content\PlaySceneAssets\Levels\3.txt";
+            this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
             this.LoadAssets();
         }
 
@@ -109,13 +110,16 @@ namespace PyramidPanic
                 case 'y':
                     return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
                 case 'z':
-                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');
-                case 'S':
-                    this.scorpions.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
-                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'S');
+                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');                
                 case 'B':
                     this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'B');
+                case 'E':
+                    this.explorer = new Explorer(this.game, new Vector2(x, y), 2.0f);
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'E');
+                case 'S':
+                    this.scorpions.Add(new Scorpion(this.game, new Vector2(x, y), 2.0f));
+                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'S');
                 case '@':
                     this.background = new Image(this.game, @"PlaySceneAssets\Background\Background2", new Vector2(x, y));
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, '@');
@@ -139,6 +143,7 @@ namespace PyramidPanic
             {
                 beetle.Update(gameTime);
             }
+            this.explorer.Update(gameTime);
         }
 
 
@@ -170,7 +175,13 @@ namespace PyramidPanic
             {
                 beetle.Draw(gameTime);
             }
+
+            if (this.explorer != null)
+            {
+                this.explorer.Draw(gameTime);
+            }
              
         }
+              
     }
 }
