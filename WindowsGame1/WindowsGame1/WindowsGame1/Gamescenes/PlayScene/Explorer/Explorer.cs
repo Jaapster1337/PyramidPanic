@@ -30,8 +30,8 @@ namespace PyramidPanic
             set
             {
                 this.position = value;
-                this.rectangle.X = (int)this.position.X;
-                this.rectangle.Y = (int)this.position.Y;
+                this.rectangle.X = (int)this.position.X+16;
+                this.rectangle.Y = (int)this.position.Y+16;
             }
         }
 
@@ -61,8 +61,8 @@ namespace PyramidPanic
             this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\Explorer");
             this.position = position;
             this.speed = speed;
-            this.rectangle = new Rectangle((int)this.position.X +16, 
-                                           (int)this.position.Y +16, 
+            this.rectangle = new Rectangle((int)this.position.X , 
+                                           (int)this.position.Y , 
                                            this.texture.Width/4, 
                                            this.texture.Height);
             this.state = new Right(this);
