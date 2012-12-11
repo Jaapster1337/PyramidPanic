@@ -8,7 +8,7 @@ w..bbbbbbE.........z
 x..ddddwwwww.......z
 y....y.......S.....z
 x....y.......S...B.x
-x..y.......SSSSS...y
+x.....x....SSSSSx..y
 w....y.......S...w.w
 y....y.......S.....x
 wywxyxwyyxwwyxwwxywy

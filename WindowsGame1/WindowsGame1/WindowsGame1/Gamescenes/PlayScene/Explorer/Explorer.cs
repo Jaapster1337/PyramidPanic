@@ -54,6 +54,11 @@ namespace PyramidPanic
         {
             get { return this.texture; }
         }
+
+        public AnimatedSprite State
+        {
+            set { this.state = value; }
+        }
         //Constructor
         public Explorer(PyramidPanic game, Vector2 position, float speed)
         {
@@ -61,11 +66,11 @@ namespace PyramidPanic
             this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\Explorer");
             this.position = position;
             this.speed = speed;
-            this.rectangle = new Rectangle((int)this.position.X , 
-                                           (int)this.position.Y , 
+            this.rectangle = new Rectangle((int)this.position.X + 16, 
+                                           (int)this.position.Y + 16, 
                                            this.texture.Width/4, 
                                            this.texture.Height);
-            this.state = new Right(this);
+            this.state = new Idle(this);
             
         }
 

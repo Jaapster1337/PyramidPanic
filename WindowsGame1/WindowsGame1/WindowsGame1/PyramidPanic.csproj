@@ -117,6 +117,9 @@
     <Compile Include="Gamescenes\PlayScene\Beetle\WalkDown.cs" />
     <Compile Include="Gamescenes\PlayScene\Beetle\WalkUp.cs" />
     <Compile Include="Gamescenes\PlayScene\Block\Block.cs" />
+    <Compile Include="Gamescenes\PlayScene\Explorer\Up.cs" />
+    <Compile Include="Gamescenes\PlayScene\Explorer\Down.cs" />
+    <Compile Include="Gamescenes\PlayScene\Explorer\Left.cs" />
     <Compile Include="Gamescenes\PlayScene\Explorer\Explorer.cs" />
     <Compile Include="Gamescenes\PlayScene\Level\Level.cs" />
     <Compile Include="Gamescenes\PlayScene\Scorpion\ScorpionManager.cs" />
@@ -125,6 +128,7 @@
     <Compile Include="Gamescenes\StartScene\MenuStartScene.cs" />
     <Compile Include="Gamescenes\HelpScene\HelpScene.cs" />
     <Compile Include="AnimatedSprite\IAnimatedSprite.cs" />
+    <Compile Include="Gamescenes\PlayScene\Explorer\Idle.cs" />
     <Compile Include="Input\Input.cs" />
     <Compile Include="Gamescenes\LevelEditorScene\LevelEditorScene.cs" />
     <Compile Include="Gamescenes\LoadScene\LoadScene.cs" />
