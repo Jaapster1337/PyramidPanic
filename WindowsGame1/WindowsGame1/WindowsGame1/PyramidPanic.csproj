@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="Gamescenes\PlayScene\Explorer\ExplorerManager.cs" />
     <Compile Include="Gamescenes\PlayScene\Beetle\BeetleManager.cs" />
     <Compile Include="Gamescenes\PlayScene\Beetle\IBeetle.cs" />
     <Compile Include="Gamescenes\PlayScene\Beetle\Beetle.cs" />

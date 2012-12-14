@@ -28,6 +28,15 @@ namespace PyramidPanic
         public override void Update(GameTime gameTime)
         {
             this.explorer.Position += new Vector2(0f, this.explorer.Speed);
+            if (ExplorerManager.CollisionDetectionWalls())
+            {
+                int geheelAantalMalen32 = (int)this.explorer.Position.Y / 32;
+                this.explorer.Position = new Vector2(this.explorer.Position.X, (geheelAantalMalen32 * 32));
+                if (Input.DetectKeyUp(Keys.Down))
+                {
+                    this.explorer.State = new Idle(this.explorer, (float)Math.PI / 2);
+                }
+            }
             if (Input.DetectKeyUp(Keys.Down))
             {
                 float modulo = this.explorer.Position.Y % 32;
@@ -35,10 +44,9 @@ namespace PyramidPanic
                 if (modulo >= (32f - this.explorer.Speed))
                 {
                     int geheelAantalMalen32 = (int)this.explorer.Position.Y / 32;
-                    this.explorer.Position = new Vector2((geheelAantalMalen32 + 1) * 32, this.explorer.Position.X);
-                    this.explorer.State = new Idle(this.explorer, 0f);
-                    this.explorer.State = new Idle(this.explorer, (float)Math.PI / 2);
-                }
+                    this.explorer.Position = new Vector2(this.explorer.Position.X, (geheelAantalMalen32 + 1) * 32);
+                    this.explorer.State = new Idle(this.explorer, (float)Math.PI/2);
+                }              
 
             }
             base.Update(gameTime);

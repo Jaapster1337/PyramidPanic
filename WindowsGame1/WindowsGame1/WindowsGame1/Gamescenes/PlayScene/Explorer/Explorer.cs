@@ -15,9 +15,9 @@ namespace PyramidPanic
     {
         //Fields
         private PyramidPanic game;
-        private Texture2D texture;
+        private Texture2D texture, collisionText;
         private Vector2 position;
-        private Rectangle rectangle;
+        private Rectangle rectangle, collisionRect;
         private float speed;
 
         //State variabele is de parentclass van de toestandsklasse
@@ -32,6 +32,8 @@ namespace PyramidPanic
                 this.position = value;
                 this.rectangle.X = (int)this.position.X+16;
                 this.rectangle.Y = (int)this.position.Y+16;
+                this.collisionRect.X = (int)this.position.X;
+                this.collisionRect.Y = (int)this.position.Y;
             }
         }
 
@@ -50,6 +52,11 @@ namespace PyramidPanic
             get { return this.rectangle; }
         }
 
+        public Rectangle CollisionRect
+        {
+            get { return this.collisionRect; }
+        }
+
         public Texture2D Texture
         {
             get { return this.texture; }
@@ -63,13 +70,18 @@ namespace PyramidPanic
         public Explorer(PyramidPanic game, Vector2 position, float speed)
         {
             this.game = game;
-            this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\Explorer");
+            this.texture = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\Explorer");
             this.position = position;
             this.speed = speed;
             this.rectangle = new Rectangle((int)this.position.X + 16, 
                                            (int)this.position.Y + 16, 
                                            this.texture.Width/4, 
                                            this.texture.Height);
+            this.collisionText = this.game.Content.Load<Texture2D>(@"PlaySceneAssets\Explorer\blank");
+            this.collisionRect = new Rectangle((int)position.X,
+                                               (int)position.Y,
+                                                32,
+                                                32);
             this.state = new Idle(this);
             
         }
@@ -80,6 +92,7 @@ namespace PyramidPanic
         //Update
         public void Update(GameTime gameTime)
         {
+            ExplorerManager.Explorer = this;
             this.state.Update(gameTime);
         }
 
@@ -87,7 +100,7 @@ namespace PyramidPanic
         //Draw
         public void Draw(GameTime gameTime)
         {
-             this.state.Draw(gameTime);
+            this.state.Draw(gameTime);
         }
     }
 }
