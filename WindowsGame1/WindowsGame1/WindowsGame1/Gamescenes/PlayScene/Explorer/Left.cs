@@ -46,9 +46,8 @@ namespace PyramidPanic
                 if (modulo <= this.explorer.Speed)
                 {
                     int geheelAantalMalen32 = (int)this.explorer.Position.X / 32;
-                    this.explorer.Position = new Vector2((geheelAantalMalen32 +1) * 32, this.explorer.Position.Y);
-                    this.explorer.State = new Idle(this.explorer, (float)Math.PI);
-                   
+                    this.explorer.Position = new Vector2((geheelAantalMalen32) * 32, this.explorer.Position.Y);
+                    this.explorer.State = new Idle(this.explorer, (float)Math.PI);                   
                 } 
                 
 

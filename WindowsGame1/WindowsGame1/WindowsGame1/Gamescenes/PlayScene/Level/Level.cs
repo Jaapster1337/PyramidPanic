@@ -45,13 +45,20 @@ namespace PyramidPanic
         {
             get { return this.blocks; }           
         }
-        
+
+        public List<Image> Treasures
+        {
+            get { return this.treasures; }
+            set { this.treasures = value; }
+        }
+
 
         //Constructor
         public Level(PyramidPanic game, int LevelIndex)
         {
             this.game = game;
             this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
+            Score.Initialize();
             this.LoadAssets();
         }
 
@@ -93,16 +100,16 @@ namespace PyramidPanic
             switch (blockElement)
             {
                 case 'a': 
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Treasure1", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('a',this.game, @"PlaySceneAssets\Treasures\Treasure1", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'a');
                 case 'b':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Treasure2", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('b',this.game, @"PlaySceneAssets\Treasures\Treasure2", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'b');
                 case 'c':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Potion", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('c',this.game, @"PlaySceneAssets\Treasures\Potion", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'c');
                 case 'd':
-                    this.treasures.Add(new Image(this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
+                    this.treasures.Add(new Treasure('d',this.game, @"PlaySceneAssets\Treasures\Scarab", new Vector2(x, y)));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'd');                
                 case 'w':
                     return new Block(this.game, @"Block", new Vector2(x, y), BlockCollision.NotPassable, 'w');
@@ -111,7 +118,7 @@ namespace PyramidPanic
                 case 'y':
                     return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
                 case 'z':
-                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');                
+                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.Passable, 'z');                
                 case 'B':
                     this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'B');

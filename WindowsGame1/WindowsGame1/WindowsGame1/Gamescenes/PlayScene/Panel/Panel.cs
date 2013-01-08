@@ -52,15 +52,15 @@ namespace PyramidPanic
                 image.Draw(gameTime);
             }
             this.game.SpriteBatch.DrawString(this.font,
-                                             "3",
+                                             Score.Lives.ToString(),
                                              this.position + new Vector2(3.8f * 32f, -2.5f),
                                              Color.Yellow);
             this.game.SpriteBatch.DrawString(this.font,
-                                             "0",
+                                             Score.Scarabs.ToString(),
                                              this.position + new Vector2(8.5f * 32f, -2.5f),
                                              Color.Yellow);
             this.game.SpriteBatch.DrawString(this.font,
-                                             "0",
+                                             Score.Points.ToString(),
                                              this.position + new Vector2(16.5f * 32f, -2.5f),
                                              Color.Yellow);
         }

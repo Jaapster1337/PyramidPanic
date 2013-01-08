@@ -146,6 +146,8 @@
     <Compile Include="Gamescenes\PlayScene\Scorpion\Scorpion.cs" />
     <Compile Include="Gamescenes\PlayScene\Scorpion\WalkRight.cs" />
     <Compile Include="Gamescenes\PlayScene\Explorer\Right.cs" />
+    <Compile Include="Gamescenes\PlayScene\Score\Score.cs" />
+    <Compile Include="Treasure.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

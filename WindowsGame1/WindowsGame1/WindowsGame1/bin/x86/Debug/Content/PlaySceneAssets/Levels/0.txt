@@ -6,7 +6,7 @@ x................w.z
 w..ccc.wwwww.......z
 w..bbbbw.E.........z
 x..ddddwwwww.......z
-y....y.......S.....z
+y....y.......S.....w
 x....y.......S...B.x
 x.....x....SSSSSx..y
 w....y.......S...w.w

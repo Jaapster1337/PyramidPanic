@@ -93,6 +93,9 @@ namespace PyramidPanic
         public void Update(GameTime gameTime)
         {
             ExplorerManager.Explorer = this;
+            ExplorerManager.CollisionDetectTreasures();
+            ExplorerManager.CollisionDetectionScorpions();
+            ExplorerManager.CollisionDetectionBeetles();
             this.state.Update(gameTime);
         }
 
@@ -101,6 +104,7 @@ namespace PyramidPanic
         public void Draw(GameTime gameTime)
         {
             this.state.Draw(gameTime);
+            
         }
     }
 }
