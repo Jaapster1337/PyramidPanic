@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -9,21 +8,33 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using Microsoft.Xna.Framework.Storage;
+
 namespace PyramidPanic
 {
     public class Scorpion : IAnimatedSprite
     {
-        //Fields
+        //Field
         private PyramidPanic game;
         private Texture2D texture;
         private Vector2 position;
         private Rectangle rectangle;
         private IScorpion state;
         private float speed;
-        private float left, right;
+        private float right, left;
+        private WalkLeft walkLeft;
+        private WalkRight walkRight;
 
         //Properties
+        public WalkLeft WalkLeft
+        {
+            get { return this.walkLeft; }
+        }
+
+        public WalkRight WalkRight
+        {
+            get { return this.walkRight; }
+        }
+
         public float Left
         {
             set { this.left = value; }
@@ -44,12 +55,12 @@ namespace PyramidPanic
         public Vector2 Position
         {
             get { return this.position; }
-            set 
+            set
             {
                 this.position = value;
-                this.rectangle.X = (int)this.position.X+16;
-                this.rectangle.Y = (int)this.position.Y+16;
-            } 
+                this.rectangle.X = (int)this.position.X + 16;
+                this.rectangle.Y = (int)this.position.Y + 16;
+            }
         }
 
         public PyramidPanic Game
@@ -58,14 +69,13 @@ namespace PyramidPanic
         }
 
         public Texture2D Texture
-        {                           
-
+        {
             get { return this.texture; }
         }
 
         public Rectangle Rectangle
         {
-           get { return this.rectangle; }
+            get { return this.rectangle; }
         }
 
         public IScorpion State
@@ -73,27 +83,28 @@ namespace PyramidPanic
             get { return this.state; }
             set { this.state = value; }
         }
-        
-        //Constructor
+
+
+        //De constructor
         public Scorpion(PyramidPanic game, Vector2 position, float speed)
         {
             this.game = game;
             this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Scorpion\Scorpion");
             this.position = position;
             this.speed = speed;
-            this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width/4, this.texture.Height);
-            this.state = new WalkLeft(this);
+            this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
+            this.walkLeft = new WalkLeft(this);
+            this.walkRight = new WalkRight(this);
+            this.state = this.walkRight;
         }
 
         //Update
-        public void Update(GameTime gameTime)            
+        public void Update(GameTime gameTime)
         {
-         this.state.Update(gameTime);      
-         
+            this.state.Update(gameTime);
         }
 
-
-        //Draw
+        //Draw methode
         public void Draw(GameTime gameTime)
         {
             this.state.Draw(gameTime);

@@ -28,7 +28,7 @@ namespace PyramidPanic
             //De scorpion loopt naar recht
             if( this.scorpion.Position.X < this.scorpion.Left)
             {
-                this.scorpion.State = new WalkRight(this.scorpion);
+                this.scorpion.State = this.scorpion.WalkRight;
             }
             this.scorpion.Position -= new Vector2(this.scorpion.Speed, 0f);
             //Dit is de code voor de animatie van de sprite

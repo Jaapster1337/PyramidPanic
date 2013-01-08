@@ -37,6 +37,7 @@ namespace PyramidPanic
                     this.explorer.State = new Idle(this.explorer, -(float)Math.PI/2);
                 }
             }
+            //blijf op het grid
             if (Input.DetectKeyUp(Keys.Up))
             {
                 float modulo = this.explorer.Position.Y % 32;
