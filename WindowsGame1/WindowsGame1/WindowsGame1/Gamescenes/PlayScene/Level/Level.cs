@@ -29,6 +29,9 @@ namespace PyramidPanic
         private List<Scorpion> scorpions;
         private List<Beetle> beetles;
         private Explorer explorer;
+        private ILevel levelState;
+        private LevelPause levelPause;
+        private LevelPlay levelPlay;
 
         //Properties
         public List<Beetle> Beetles            
@@ -52,6 +55,35 @@ namespace PyramidPanic
             set { this.treasures = value; }
         }
 
+        public Explorer Explorer
+        {
+            get { return this.explorer; }
+            set { this.explorer = value; }
+        }
+
+        public PyramidPanic Game
+        {
+            get { return this.game; }
+        }
+
+        public ILevel LevelState
+        {
+            get { return this.levelState; }
+            set { this.levelState = value; }
+        }
+
+        public LevelPause LevelPause
+        {
+            get { return this.levelPause; }
+            set { this.LevelPause = value; }
+        }
+
+        public LevelPlay LevelPlay
+        {
+            get { return this.levelPlay; }
+            set { this.levelPlay = value; }
+        }
+
 
         //Constructor
         public Level(PyramidPanic game, int LevelIndex)
@@ -59,6 +91,9 @@ namespace PyramidPanic
             this.game = game;
             this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
             Score.Initialize();
+            this.levelPause = new LevelPause(this);
+            this.levelPlay = new LevelPlay(this);
+            this.levelState = this.LevelPlay;
             this.LoadAssets();
         }
 
@@ -142,16 +177,7 @@ namespace PyramidPanic
         //Update
         public void Update(GameTime gameTime)
         {
-            foreach (Scorpion scorpion in this.scorpions)
-            {
-                scorpion.Update(gameTime);
-            }
-
-            foreach (Beetle beetle in this.beetles)
-            {
-                beetle.Update(gameTime);
-            }
-            this.explorer.Update(gameTime);
+            this.levelState.Update(gameTime);
         }
 
 
@@ -160,7 +186,7 @@ namespace PyramidPanic
         {
             
             this.background.Draw(gameTime);
-            this.panel.Draw(gameTime);
+           
             for ( int row = 0; row < this.blocks.GetLength(1); row++)
             {
                 for (int column = 0; column < this.blocks.GetLength(0); column++)
@@ -188,7 +214,9 @@ namespace PyramidPanic
             {
                 this.explorer.Draw(gameTime);
             }
-             
+
+            this.levelState.Draw(gameTime);
+            this.panel.Draw(gameTime);
         }
               
     }

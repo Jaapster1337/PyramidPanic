@@ -34,3 +34,4 @@ D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\Resol
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Overlay\overlay2.xnb

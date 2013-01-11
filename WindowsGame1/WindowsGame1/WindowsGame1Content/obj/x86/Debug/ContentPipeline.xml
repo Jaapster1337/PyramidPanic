@@ -244,6 +244,15 @@
       <Output>D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Font\Arial.xnb</Output>
       <Time>2012-11-23T11:39:45.3169608+01:00</Time>
     </Item>
+    <Item>
+      <Source>PlaySceneAssets\Overlay\overlay2.png</Source>
+      <Name>PlaySceneAssets\Overlay\overlay2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\PlaySceneAssets\Overlay\overlay2.xnb</Output>
+      <Time>2013-01-11T09:55:31.9546864+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
