@@ -59,7 +59,7 @@ namespace PyramidPanic
                         break;
                 }
                 
-                this.removeIndex = 1;
+                this.removeIndex = -1;
                 this.level.LevelState = level.LevelPlay;
                 this.timer = 0f;
                 level.Explorer.Position = new Vector2(288f, 192f);

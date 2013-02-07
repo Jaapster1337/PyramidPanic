@@ -92,7 +92,6 @@ namespace PyramidPanic
         //Update
         public void Update(GameTime gameTime)
         {
-            ExplorerManager.Explorer = this;
             ExplorerManager.CollisionDetectTreasures();
             ExplorerManager.CollisionDetectionScorpions();
             ExplorerManager.CollisionDetectionBeetles();

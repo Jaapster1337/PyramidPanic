@@ -39,7 +39,6 @@ namespace PyramidPanic
             if (Input.DetectKeyUp(Keys.Right))
             {
                 float modulo = this.explorer.Position.X % 32;
-                Console.WriteLine(modulo);
                 if (modulo >= (32f - this.explorer.Speed))
                 {
                     int geheelAantalMalen32 = (int)this.explorer.Position.X / 32;

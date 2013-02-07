@@ -28,6 +28,14 @@ namespace PyramidPanic
             set { explorer = value; }
         }
 
+        public static bool WalkOutOfLevel()
+        {
+            return (explorer.Position.X > 639 
+                 || explorer.Position.X < -31
+                 || explorer.Position.Y > 447 
+                 || explorer.Position.Y < -31 ) ? true : false;
+        }
+
         public static bool CollisionDetectionWalls()
         {
             for (int i = 0; i < level.Blocks.GetLength(0); i++)
@@ -65,6 +73,21 @@ namespace PyramidPanic
                         default: 
                             break;
                     }
+                    if (Score.openDoors()&& Score.DoorsAreClosed)
+                    {
+                        for (int i = 0; i < level.Blocks.GetLength(0); i++)
+                        {
+                            for (int j = 0; j < level.Blocks.GetLength(1); j++)
+                            {
+                                if (level.Blocks[i,j].CharItem == 'z')
+                                {
+                                    level.LevelState = level.LevelDoorOpen;
+                                    level.Blocks[i, j].BlockCollision = BlockCollision.Passable;
+                                }
+                            }
+                        }
+                        Score.DoorsAreClosed = false;
+                    }
                     level.Treasures.Remove(treasure);
                     break;
                                  
@@ -79,10 +102,7 @@ namespace PyramidPanic
             foreach (Scorpion scorpion in level.Scorpions)
             {
                 if (explorer.CollisionRect.Intersects(scorpion.CollisionRectangle))
-                {
-
-                     
-                    //level.Scorpions.Remove(scorpion);
+                {                  
                     Console.WriteLine(level.Scorpions.IndexOf(scorpion));
                     level.LevelPause.RemoveIndex = level.Scorpions.IndexOf(scorpion);
                     level.LevelState = level.LevelPause;

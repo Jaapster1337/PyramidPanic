@@ -99,7 +99,7 @@ namespace PyramidPanic
             this.texture = game.Content.Load<Texture2D>(@"PlaySceneAssets\Scorpion\Scorpion");
             this.position = position;
             this.speed = speed;
-            this.rectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
+            this.rectangle = new Rectangle((int)this.position.X +16, (int)this.position.Y +16, this.texture.Width / 4, this.texture.Height);
             this.collisionRectangle = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
             this.walkLeft = new WalkLeft(this);
             this.walkRight = new WalkRight(this);

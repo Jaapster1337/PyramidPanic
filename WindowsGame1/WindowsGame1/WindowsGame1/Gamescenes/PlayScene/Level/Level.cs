@@ -32,6 +32,10 @@ namespace PyramidPanic
         private ILevel levelState;
         private LevelPause levelPause;
         private LevelPlay levelPlay;
+        private LevelDoorOpen levelDoorOpen;
+        private LevelGameOver levelGameOver;
+        private LevelNextLevel levelNextLevel;
+        private LevelEndGame levelEndGame;
 
         //Properties
         public List<Beetle> Beetles            
@@ -84,17 +88,51 @@ namespace PyramidPanic
             set { this.levelPlay = value; }
         }
 
+        public LevelDoorOpen LevelDoorOpen
+        {
+            get { return this.levelDoorOpen; }
+            set { this.levelDoorOpen = value; }
+        }
+
+        public LevelGameOver LevelGameOver
+        {
+            get { return this.levelGameOver; }
+            set { this.levelGameOver = value; }
+        }
+
+        public LevelNextLevel LevelNextLevel
+        {
+            get { return this.levelNextLevel; }
+            set { this.levelNextLevel = value; }
+        }
+
+        public LevelEndGame LevelEndGame
+        {
+            get { return this.levelEndGame; }
+            set { this.levelEndGame = value; }
+        }
 
         //Constructor
-        public Level(PyramidPanic game, int LevelIndex)
+        public Level(PyramidPanic game, int levelIndex)
+
         {
+            this.levelPath = @"Content\PlaySceneAssets\Levels\" + levelIndex + ".txt";
             this.game = game;
-            this.levelPath = @"Content\PlaySceneAssets\Levels\0.txt";
-            Score.Initialize();
             this.levelPause = new LevelPause(this);
             this.levelPlay = new LevelPlay(this);
-            this.levelState = this.LevelPlay;
+            this.levelDoorOpen = new LevelDoorOpen(this);
+            this.levelGameOver = new LevelGameOver(this);
+            this.LevelNextLevel = new LevelNextLevel(this);
+            this.LevelEndGame = new LevelEndGame(this);
             this.LoadAssets();
+            ExplorerManager.Explorer = this.explorer;          
+            this.levelPause = new LevelPause(this);
+            this.levelPlay = new LevelPlay(this);
+            this.levelDoorOpen = new LevelDoorOpen(this);
+            this.levelGameOver = new LevelGameOver(this);
+            this.LevelNextLevel = new LevelNextLevel(this);
+            this.levelState = this.LevelPlay;
+            
         }
 
         private void LoadAssets()
@@ -153,7 +191,7 @@ namespace PyramidPanic
                 case 'y':
                     return new Block(this.game, @"Wall2", new Vector2(x, y), BlockCollision.NotPassable, 'y');
                 case 'z':
-                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.Passable, 'z');                
+                    return new Block(this.game, @"Door", new Vector2(x, y), BlockCollision.NotPassable, 'z');                
                 case 'B':
                     this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2.0f));
                     return new Block(this.game, @"Transparant", new Vector2(x, y), BlockCollision.Passable, 'B');

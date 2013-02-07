@@ -1,0 +1,117 @@
+body 
+{
+	font-family:Segoe UI;
+	font-size:10ph;
+	background-color: #000000;
+	background-repeat:full;
+	color:#626262;
+	border:0px solid white;
+	margin:25px;
+	padding:25px;
+}
+
+div#container
+{
+	border:0px solid #FFFFFF;
+	color:#626262;
+	width:1200px;
+	height:470px;
+	margin:auto;
+	padding:5px;
+}
+
+#terms_and_conditions_privacy_policy
+{
+	font-family:Arial;
+}
+
+#banner
+{
+	background-color:#83B5FF;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	color:#595959;
+	border: 6px solid #FFFFFF;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+#link_central
+{
+	font-family:Arial;
+	background-color:#CCCCCC;
+	border: 6px solid #FFFFFF;
+	text-align:center;
+}
+#footer
+{
+	font-family:Times New Roman;
+	background-color:#CCCCCC;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	width:auto;
+	height:50px;
+	color:#626262;
+	border: 6px solid #FFFFFF;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+#table tr, #table td, #table th
+{
+	position:center;
+	border:2px solid #858585;
+	background-color:#CCCCCC;
+	color:#626262;
+	margin:10px;
+	padding:10px;
+}
+#table th
+{
+	background-color:#83B5FF;
+	color:#595959;
+}
+#table td
+{
+	padding:5px;
+}
+
+caption
+{
+	font-weight:bold;
+	text-align:center;
+	font-size:1.5em;
+	color:#626262;
+}
+
+#content
+{
+	border:6px solid #FFFFFF;
+	background-color:#FFFFFF;
+	color:#626262;
+	margin:0px;
+	padding:0px;
+	min-height:250px;
+	position:relative;
+}
+
+a:link 
+{ 
+	color: #626262; 
+}
+a:visited
+{ 
+	color: #626262;
+}
+a:hover
+{
+	text-decoration:none;
+	color: #EE1F25;
+}
+a:active
+{
+	text-decoration:none;
+	color: #EE1F25;
+}

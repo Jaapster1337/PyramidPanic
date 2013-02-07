@@ -91,10 +91,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PlaySceneAssets\Levels\0.txt">
-      <Name>0</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="PlaySceneAssets\Levels\1.txt">
       <Name>1</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -229,6 +225,173 @@
   <ItemGroup>
     <Compile Include="PlaySceneAssets\Overlay\overlay2.png">
       <Name>overlay2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlaySceneAssets\Overlay\overlay3.png">
+      <Name>overlay3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlaySceneAssets\Overlay\overlay.png">
+      <Name>overlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlaySceneAssets\Overlay\overlay4.png">
+      <Name>overlay4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlaySceneAssets\Background\Congratulation.png">
+      <Name>Congratulation</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\2.txt">
+      <Name>2</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlaySceneAssets\Background\Background3.png">
+      <Name>Background3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlaySceneAssets\Levels\4.txt">
+      <Name>4</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlaySceneAssets\Levels\5.txt">
+      <Name>5</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlaySceneAssets\Levels\6.txt">
+      <Name>6</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlaySceneAssets\Levels\7.txt">
+      <Name>7</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlaySceneAssets\Levels\8.txt">
+      <Name>8</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PlaySceneAssets\Levels\9.txt">
+      <Name>9</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlaySceneAssets\Helper\help.png">
+      <Name>help</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LevelEditorAssets\Left.png">
+      <Name>Left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorAssets\Right.png">
+      <Name>Right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LevelEditorAssets\Panel.png">
+      <Name>Panel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LevelEditorAssets\Beetle.png">
+      <Name>Beetle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorAssets\mummy.png">
+      <Name>mummy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorAssets\Scorpion.png">
+      <Name>Scorpion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LevelEditorPictures\Block.png">
+      <Name>Block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Block_hor.png">
+      <Name>Block_hor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Block_vert.png">
+      <Name>Block_vert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Door.png">
+      <Name>Door</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Lives.png">
+      <Name>Lives</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Potion.png">
+      <Name>Potion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Scarab.png">
+      <Name>Scarab</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Treasure1.png">
+      <Name>Treasure1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Treasure2.png">
+      <Name>Treasure2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Wall1.png">
+      <Name>Wall1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LevelEditorPictures\Wall2.png">
+      <Name>Wall2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
