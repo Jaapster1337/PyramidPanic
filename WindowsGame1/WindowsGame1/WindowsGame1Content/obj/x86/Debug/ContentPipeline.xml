@@ -460,6 +460,15 @@
       <Output>D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\LevelEditorPictures\Wall2.xnb</Output>
       <Time>2013-01-31T15:47:34.1892443+01:00</Time>
     </Item>
+    <Item>
+      <Source>LevelEditorAssets\Button_save.png</Source>
+      <Name>LevelEditorAssets\Button_save</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\LevelEditorAssets\Button_save.xnb</Output>
+      <Time>2013-02-07T15:14:10.7854616+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

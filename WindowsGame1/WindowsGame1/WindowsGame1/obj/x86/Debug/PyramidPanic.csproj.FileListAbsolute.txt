@@ -64,3 +64,4 @@ D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Conte
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\LevelEditorPictures\Treasure2.xnb
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\LevelEditorPictures\Wall1.xnb
 D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\LevelEditorPictures\Wall2.xnb
+D:\school\AM1A\blok 2\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\LevelEditorAssets\Button_save.xnb

@@ -49,6 +49,7 @@ Content\LevelEditorPictures\Treasure1.xnb
 Content\LevelEditorPictures\Treasure2.xnb
 Content\LevelEditorPictures\Wall1.xnb
 Content\LevelEditorPictures\Wall2.xnb
+Content\LevelEditorAssets\Button_save.xnb
 Content\PlaySceneAssets\Levels\1.txt
 Content\PlaySceneAssets\Levels\3.txt
 Content\PlaySceneAssets\Levels\2.txt
